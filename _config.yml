@@ -1,0 +1,40 @@
+# site
+title: Tianlh.
+subtitle: 个人主页
+SEOTitle: Tianlh的个人主页
+author: tianlh
+header-img: img/head-bg1.jpg
+description_footer: 来自tianlh的个人主页
+keyword: ""
+
+# sidebar settings
+sidebar: false
+sidebar-about-description: ""
+sidebar-avatar: /img/head-bg1.jpg
+
+# URL
+url: https://tianlh.github.io/
+baseurl: "/blog"
+permalink: /:year/:month/:day/:title
+
+# SNS
+github_username: "tianlh"
+email: tianlh@126.com
+
+# conversion
+highlighter: rouge
+markdown: kramdown
+
+# comment
+duoshuo_shortname: tianlhblog
+
+# outputting
+plugins: [jekyll-paginate]
+paginate: 9
+
+# handling reading
+exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md"]
+
+# statistic settings
+# baidu analytics
+# google Analytics
