@@ -14,7 +14,7 @@ sidebar-avatar: /img/head-bg1.jpg
 
 # URL
 url: https://tianlh.github.io/
-baseurl: "/blog"
+baseurl: ""
 permalink: /:year/:month/:day/:title
 
 # SNS
