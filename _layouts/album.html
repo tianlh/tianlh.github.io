@@ -1,0 +1,108 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+<header class = "intro-header" style = "background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class = "site-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <!--<hr class="small">-->
+                    <span class = "subheading">{% if page.description %}{{ page.description }}{% else %}{{site.description}}{% endif %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class = "show-image", id = "show-image">
+    <div id = 'show-image2'>
+    </div>
+</div>
+
+{% if page.photo1 or page.photo2 or page.photo3 %}
+<div class = "imglist">
+    {% if page.photo1 %}
+    <img onclick ='showBgImg(this)' class = "imglist-left" style = "background-image: url({{ page.photo1 }})" alt = "">
+    {% endif %}
+    {% if page.photo2 %}
+    <img onclick ='showBgImg(this)' class = "imglist-mid" style = "background-image: url({{ page.photo2 }})" alt = "">
+    {% endif %}
+    {% if page.photo3 %}
+    <img onclick ='showBgImg(this)' class = "imglist-right" style = "background-image: url({{ page.photo3 }})" alt = "">
+    {% endif %}
+</div>
+{% endif %}
+
+{% if page.photo4 or page.photo5 or page.photo6 %}
+<div class = "imglist">
+    {% if page.photo4 %}
+    <img onclick ='showBgImg(this)' class = "imglist-left" style = "background-image: url({{ page.photo4 }})" alt = "">
+    {% endif %}
+    {% if page.photo5 %}
+    <img onclick ='showBgImg(this)' class = "imglist-mid" style = "background-image: url({{ page.photo5 }})" alt = "">
+    {% endif %}
+    {% if page.photo6 %}
+    <img onclick ='showBgImg(this)' class = "imglist-right" style = "background-image: url({{ page.photo6 }})" alt = "">
+    {% endif %}
+</div>
+{% endif %}
+
+{% if page.photo7 or page.photo8 or page.photo9 %}
+<div class = "imglist">
+    {% if page.photo7 %}
+    <img onclick ='showBgImg(this)' class = "imglist-left" style = "background-image: url({{ page.photo7 }})" alt = "">
+    {% endif %}
+    {% if page.photo8 %}
+    <img onclick ='showBgImg(this)' class = "imglist-mid" style = "background-image: url({{ page.photo8 }})" alt = "">
+    {% endif %}
+    {% if page.photo9 %}
+    <img onclick ='showBgImg(this)' class = "imglist-right" style = "background-image: url({{ page.photo9 }})" alt = "">
+    {% endif %}
+</div>
+{% endif %}
+
+{% if page.photo10 or page.photo11 or page.photo12 %}
+<div class = "imglist">
+    {% if page.photo10 %}
+    <img onclick ='showBgImg(this)' class = "imglist-left" style = "background-image: url({{ page.photo10 }})" alt = "">
+    {% endif %}
+    {% if page.photo11 %}
+    <img onclick ='showBgImg(this)' class = "imglist-mid" style = "background-image: url({{ page.photo11 }})" alt = "">
+    {% endif %}
+    {% if page.photo12 %}
+    <img onclick ='showBgImg(this)' class = "imglist-right" style = "background-image: url({{ page.photo12 }})" alt = "">
+    {% endif %}
+</div>
+{% endif %}
+
+<ul class="pager">
+    {% if page.prepage %}
+    <li class="previous">
+        <a href = "{{ page.prepage | prepend: site.baseurl }}"> PREVIOUS </a>
+    </li>
+    {% endif %}
+    {% if page.nextpage %}
+    <li class="next">
+        <a href = "{{ page.nextpage | prepend: site.baseurl }}"> NEXT </a>
+    </li>
+    {% endif %}
+</ul>
+
+<script>
+    var showimage = document.getElementById('show-image');
+    var showimage2 = document.getElementById('show-image2');
+    function showBgImg(e) {
+        var background = getComputedStyle(e, 'style').backgroundImage;
+        showimage.style.display = "block";
+        showimage2.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;'
+        showimage2.style.cssText += 'animation-name: zoom; animation-duration: 0.3s;';
+        showimage2.style.cssText += 'background-size: contain; background-repeat: no-repeat; background-position: center;'
+        showimage2.style.cssText += 'background-image:' + background;
+    }
+    showimage.onclick = function() {
+        showimage.style.display = 'none';
+    }
+</script>
