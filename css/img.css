@@ -45,6 +45,11 @@
     to {transform: scale(1)}
 }
 
+@keyframes zoom2 {
+    from {transform: scale(1)}
+    to {transform: scale(0.1)}
+}
+
 .show-image {
     position: fixed;
     top: 0;

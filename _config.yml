@@ -8,9 +8,14 @@ description_footer: 来自tianlh的个人主页
 keyword: ""
 
 # sidebar settings
-sidebar: false
+sidebar: true
 sidebar-about-description: ""
-sidebar-avatar: /img/head-bg1.jpg
+sidebar-avatar:
+sidebar-about-description:
+
+# Tags
+featured-tags: true
+featured-condition-size: 1
 
 # URL
 url: https://tianlh.github.io/

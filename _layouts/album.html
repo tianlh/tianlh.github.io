@@ -92,17 +92,18 @@ layout: default
 </ul>
 
 <script>
-    var showimage = document.getElementById('show-image');
-    var showimage2 = document.getElementById('show-image2');
+    var showimage = document.getElementById('show-image')
+    var showimage2 = document.getElementById('show-image2')
     function showBgImg(e) {
-        var background = getComputedStyle(e, 'style').backgroundImage;
-        showimage.style.display = "block";
+        var background = getComputedStyle(e, 'style').backgroundImage
+        showimage.style.display = "block"
         showimage2.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;'
-        showimage2.style.cssText += 'animation-name: zoom; animation-duration: 0.3s;';
+        showimage2.style.cssText += 'animation-name: zoom; animation-duration: 0.3s;'
         showimage2.style.cssText += 'background-size: contain; background-repeat: no-repeat; background-position: center;'
-        showimage2.style.cssText += 'background-image:' + background;
+        showimage2.style.cssText += 'background-image:' + background
     }
     showimage.onclick = function() {
-        showimage.style.display = 'none';
+        showimage2.style.cssText += 'animation-name: zoom2; animation-duration: 0.3s;'
+        setTimeout("showimage.style.display = 'none'", 200)
     }
 </script>
