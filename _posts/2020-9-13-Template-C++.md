@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "泛型编程C++"
+title: "泛型编程 C++"
 date: 2020-9-13
 author: Tianlh
 header-img: "img/head-bg1.jpg"
